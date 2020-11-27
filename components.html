@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component library</title>
+    <link href="/styles.css" rel="stylesheet"></link>
+</head>
+<body>
+    <h1>component library</h1>
+    <p><strong>Sruthi Ragupathy </strong>is attending neog.camp and is currently completing levelZero one weekend and assignment at a time.</p>
+    <p>This is a component library created by her to better design each element.</p>
+    <p>After creating this library she is going to use the components in her <strong>portfolio, blog and all projects created.</strong> This will ensure that all her projects have <strong>consistent themeing and styling</strong></p>
+    <hr/>
+    <h2>@typography</h2>
+    <h1>The biggest heading h1</h1>
+    <h2>The second biggest heading h2</h2>
+    <p>This is normal text. Long running text would look like this on your website. This will auto fold based on the width</p>
+    <small>This is relatively smaller text</small>
+    <hr/>
+    <h2>@Container</h2>
+    <h3>@Fluid Container</h3>
+    <div class = "container">
+    This is going to be a fluid container. It will go full width of page. With some margin.
+    </div>
+    <h3>@Center Container</h3>
+    <div class="container container-center">
+    This is going to be a center container. It will go till a given width and center content.
+    </div>
+    <hr/>
+    <h2>@links</h2>
+    <a href="/" class="link link-primary">Primary Link</a>
+    <a href="/" class="link link-secondary">Secondary Link</a>
+    <hr/>
+    <h2>@lists</h2>
+    <h3>unordered lists</h3>
+    <p>We don't want to to show bullets in the unordered list . We will remove that with CSS</p>
+    <ul class = "list">
+        <li>item one</li>
+        <li>item two</li>
+        <li>item three</li>
+    </ul>
+    <h3>inline lists</h3>
+    <p>Instead of going in a new row, we will create a list which will take columns.</p>
+    <ul class="list ">
+        <li class="list-inline">item one</li>
+        <li class="list-inline">item two</li>
+        <li class="list-inline">item two</li>
+    </ul>
+    <h3>reverse ordered lists</h3>
+    <p>Counting will go reversed for this list</p>
+    <ol reversed>
+        <li>some</li>
+        <li>something</li>
+        <li>something else</li>
+
+    </ol>
+    <hr/>
+    <h2>@nav</h2>
+    <p>Navigation is used on the top of the page and used to get to different pages</p>
+    <nav class="nav">
+        <div class="nav-brand">theBrandName</div>
+        <ul class="nav-bar list">
+            <li class="list-inline"><a class="link item-active" href = "/">Home</a></li>
+            <li class="list-inline"><a class="link" href = "/">Projects</a></li>
+            <li class="list-inline"><a class="link" href = "/">About</a></li>
+        </ul>
+    </nav>
+    <hr/>
+    <h2>@header</h2>
+    <header class="hero">
+        <img src="/images/Software_Engineer.svg" alt="software_engineer image"/>
+        <h1 class="hero-header">This is heading h1 inside header</h1>
+    </header>
+    <hr/>
+    <h2>@section</h2> 
+    <p>A section is used to separate parts of pages. In marketing websites you would have seen a header followed by sections of features, team, pricing, contact info etc.</p>
+    <h3>@normal section</h3>
+    <section class="sec">
+        <h3 class="sec-header">heading inside section</h3>
+        <p>Text defining this section and many more things</p>
+        <a href="/" class="link link-primary">Primary button</a>
+    </section>
+    <h3>@an offwhite section</h3>
+    <section class="sec offwhite">
+        <h3 class="sec-header">heading inside offwhite section</h3>
+        <p>Text defining this section and many more things</p>
+        <a href="/" class="link link-primary">Primary button</a>
+    </section>
+    <hr/>
+    <h2>@footer</h2>
+    <footer class="footer">
+        <h2>header inside footer</h2>
+        <ul class="list">
+            <li class="list-inline"><a class="link" href="/"></a>Instagram</a></li>
+            <li class="list-inline"><a class="link" href="/">Github</a></li>
+            <li class="list-inline"><a class="link" href="/">LinkedIn</a></li>
+        </ul>
+
+    </footer>
+</body>
+</html>
