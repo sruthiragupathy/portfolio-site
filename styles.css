@@ -172,10 +172,20 @@ hr{
 }
 
 .blog img{
-    max-width:425px;
+    max-width:250px;
     margin:1rem auto;
     display:block;
+    object-fit:contain;
 }
+
+
+
+@media only screen and (min-width: 430px) {
+    .blog img{
+    max-width:400px;
+
+    }
+  }
 
 .blog a{
     text-decoration: none;
