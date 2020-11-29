@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "../styles.css" rel="stylesheet"></link>
+    <title>Blog | Objects </title>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">SruthiCodes</div>
+        <ul class="nav-bar list">
+            <li class="list-inline"><a class="link" href = "/">Home</a></li>
+            <li class="list-inline"><a class="link" href = "/projects.html">Projects</a></li>
+            <li class="list-inline"><a class="link item-active" href = "/blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+    <div class="blog">
+    <a href="../blogs.html">< Back to Blogs</a>
+    <h1>Objects in Javascript</h1>
+    <small>Posted by Sruthi on Aug 15,2020</small>
+    <p>Hi there, this post is all about objects. But , First things first if you have not checked out my previous post on Var vs Let vs Const , check it out <a href="Var Vs Let Vs Const.html">here</a></p>
+    <p>Alright, Here we go!</p>
+    <h2>What is an object?</h2>
+    <p>Objects in javascript can be compared to an object in real world. Let us consider a car as an object. The car ofcourse has a lot of characteristics such as brand, color, weight, design-type etc..</p>
+    <p>In the example above, car is an object.</p>
+    <p>let us assume, the brand is BMW , color is black, weight is 1200kgs and the design-type is sedan.</p>
+    <p>Thus , an object is a collection of properties.The property can be considered as a key-value pair.</p>
+    <p>The keys in the above case are brand, color, weight and design-type ,while the values are BMW, black, 1200kgs and sedan.</p>
+    <p>Now let's convert all these to code.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/mj9qwvwondskrr7x65g8.png">
+    <p>Here , the object keys are always string type, while the values can be of any <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">type</a>.</p>
+    <h2>Accessing and Setting the object properties</h2>
+    <p>We can access the properties of an object using two ways.</p>
+    <h3>Dot Notation</h3>
+    <p></p>
+    The common way to access the object property is using dot notation.
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/vsnxjy1pyc6731dy6ckf.png" class="blog-image">
+    <h3>Bracket Notation</h3>
+    <p>You can wonder why do we need bracket notation, while we have dot notation. Because I wondered too.</p>
+    <p>But, this notation is highly useful in two cases ,</p>
+    <ul>
+        <li>when the object key is not a valid javascript identifier. i.e.., when the property name contains hyphens,space, etc..,</li>
+        <li>when the object key is not determined until runtime.</li>
+    </ul>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/h6kmkr725aj8xecf4zqz.png" class="blog-image">
+    <p>In the case 1, Trying to access <strong>screen resolution</strong> with dot notation gives error since it is not a valid javascript identifier.</p>
+    <p>In the case 2, the variable <strong>key</strong> is assigned the value of <strong>"capacity"</strong>.Trying to access <strong>phone.key</strong> gives the output <strong>undefined</strong>,because the object key named <strong>key</strong> is not present and hence phone[key] gives the result <strong>64 GB</strong> as the key is assigned the value "capacity" during runtime.</p>
+    <h2>Object.keys(),Object.values() and Object.entries() methods</h2>
+    <p>The Object.keys() method returns all the keys of an object as an array.</p>
+    <p>The Object.values() method returns all the values of an object as an array.</p>
+    <p>The Object.entries() method returns all the properties(key-value pairs) of an object as an array of key-value pairs.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/87ll7vc49tqhtbtdku0k.png" class="blog-image">
+    <h2>Object Creation</h2>
+    <p>There are different ways in which we can create objects.</p>
+    <ul>
+        <li>Object literals</li>
+        <li>New Operator or Constructor</li>
+        <li>Object.create method </li>
+    </ul>
+    <h3>Object literals</h3>
+    <p>This is the simplest way of creating objects. The object literal is a list of key-value pairs separated by commas.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/rjek60ka0gr6j4tmwrpv.png" class="blog-image">
+    <p>Here, car is an object literal.</p>
+    <h3>New Operator</h3>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/z9t1s6ybtpsazotswwof.png" class="blog-image">
+    <h3>Constructor</h3>
+    <p>This is the generic way of creating objects.If we invoke a function using new operater, the function acts a constructor and returns object.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/lec4secwlhehdu0h3xmm.png" class="blog-image">
+    <p>By this method, we can create any number of objects just by passing values to the constructor function</p>
+    <h3>Object.create() method</h3>
+    <p>The Object.create() method can be used when a new object has to be created,using an existing object as the prototype of the newly created object.</p>
+    <p>Let us consider an object <strong>movies</strong>,</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/oirz6r8eff39w0bc2eu1.png" class="blog-image">
+    <p>Here, the new object movie1 inherits the properties of existing object movies .</p>
+    <p>It is also possible to overwrite the inherited properties.Let us consider a new object movie2 which inherits the properties of the existing object movies.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/9kp6fixnd7ryzfdqpwmt.png" class="blog-image">
+    <p>Here, the value of the inherited property Studio has been overwritten by DC.</p>
+    <p>Writing this blog helped me understand more about objects, I hope you got a better clarity too:)</p>
+</div>
+
+
+
+</body>
+</html>

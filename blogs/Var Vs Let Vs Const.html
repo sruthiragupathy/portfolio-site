@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "../styles.css" rel="stylesheet"></link>
+    <title>Blog | Var Vs Let Vs Const </title>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">SruthiCodes</div>
+        <ul class="nav-bar list">
+            <li class="list-inline"><a class="link" href = "/">Home</a></li>
+            <li class="list-inline"><a class="link" href = "/projects.html">Projects</a></li>
+            <li class="list-inline"><a class="link item-active" href = "/blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+    <div class="blog">
+    <a href="../blogs.html">< Back to Blogs</a>
+    <h1>Var vs Let vs Const in Javascript</h1>
+    <small>Posted by Sruthi on Aug 8,2020</small>
+    <p>Before speaking about the keywords var,let and const, I believe it is extremely important to understand the concept of scope.</p>
+    <h2>Global Scope</h2>
+    <p>Variables declared <strong>outside any function</strong> (globally) have global scope</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/re2kqbae91b5gmhuc76e.PNG" class="blog-image">
+    
+    <p>Here, the variable global can be accessed from anywhere.</p>
+    <h2>Function Scope</h2>
+    <p>Variables declared <strong>inside a function</strong> (locally) have local scope</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/6tuadoniffmvk0751k49.PNG" class="blog-image">
+    <p>Here, the variable local can be accessed only inside the function.</p>
+    <h2>Block Scope</h2>
+    <p>Some variables can be accessed only <strong>block</strong> i.e.,within {}</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/6tuadoniffmvk0751k49.PNG" class="blog-image">
+    <p>Here , the variable <strong>block</strong> can be accessed only within the if block. It cannot be accessed from anywhere else. Thus, the variable block has only block scope.</p>
+    <p>Now that we are clear with the scope, let's dive into the var,let and const keywords.</p>
+    <h2>1.Var</h2>
+    <h3>1.1.Scope</h3>
+    <p>The variables defined with the keyword <strong>var</strong> have <strong>function</strong> scope.If it is defined outside the function , then the scope of the variable is <strong>global</strong>.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/9crm7ueicqhw0lce7t1h.PNG" class="blog-image">
+    <p>Here, the variable <strong>foo</strong> defined with the keyword <strong>var</strong> can be accessed from anywhere while the variable <strong>bar</strong> is limited to the function scope.</p>
+    <h3>1.2.Redeclaration and Reassignment</h3>
+    <p>The variables declared with the keyword <strong>var</strong> can be redeclared and reassigned.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/e0uiajxq352srub49rv4.PNG" class="blog-image">
+    <h3>1.3.Hoisting</h3>
+    <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.</p>
+    <p>Variables declared with <strong>var</strong> keyword are hoisted at the top of its scope and is initialized with <strong>undefined</strong>.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/0zdsdjpxyiw3x2quslu4.PNG" class="blog-image">
+    <p>Here, the variable <strong>foo</strong> is declared later.But it is hoisted at the top and initialized to undefined.</p>
+    <p>Only variables declared with <strong>var</strong> keyword exhibit this behaviour.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/46q3si16xb4rmfv3wybe.PNG" class="blog-image">
+    <p>In the above example, since the variable <strong>a</strong> is not declared with var keyword, it is not hoisted and hence trying to access the variable before declaration in the hoist function throws an error.</p>
+    <h2>2.Let</h2>
+    <h3>2.1.Scope</h3>
+    <p>The variables declared with the keyword <strong>let</strong> have block scope.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/h422ufrv9v24ashah8js.PNG" class="blog-image">
+    <p>Here, the variable <strong>i</strong> can be accessed only within the <strong>for</strong> loop.</p>
+    <h3>2.2.Redeclaration and Reassignment</h3>
+    <p>Variables declared with <strong>let</strong> keyword cannot be redeclared, but it can be reassigned.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/u1fnncsf4tgdby1072ha.PNG" class="blog-image">
+    <h3>2.3.Hoisting</h3>
+    <p>Variables declared with <strong>let</strong> are also hoisted at the top, but let variables are not initialized until their definition is evaluated.This is because of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">Temporal Dead Zone</a>.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/woymgir1uftks1opgb1g.PNG" class="blog-image">
+    <p>Thus,trying to access the variable <strong>foo</strong> before declaration gives reference error.</p>
+    <h2>3.Let</h2>
+    <h3>3.1.Scope</h3>
+    <p>The variables declared with the keyword <strong>const</strong> also have block scope.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/41kylsqvi3p90d5wtfol.PNG" class="blog-image">
+    <h3>3.2.Redeclaration and Reassignment</h3>
+    <p>Variables declared with <strong>const</strong> keyword must be initialized at the time of its declaration itself.Otherwise an error is thrown.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/cjcfbnuyuedmeq4lxta4.PNG" class="blog-image">
+    <p>Variables declared with <strong>const</strong> keyword cannot be redeclared and reassigned.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/uaw1apjhhscqwk6sdgxb.PNG" class="blog-image">
+    <p>Attempting to overwrite objects with const keyword throws error. But object keys are not protected and they are mutable.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/tmiadywsbzxiuno62wci.PNG" class="blog-image">
+    <p>Here, we can see that the object cannot be reassigned, but the keys of the object are mutable.</p>
+    <p>Similarly arrays declared with const keyword cannot be overwritten. But the elements in the array is mutable.</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/v0izkbjqolf6t9qc848p.PNG" class="blog-image">
+    <h3>3.3.Hoisting</h3>
+    <p>Variables declared with <strong>const</strong> keyword behave the same way as <const>let</const>let keyword.They are hoisted at the top of the scope but they are not initialized until their definition is evaluated</p>
+    <img src="https://dev-to-uploads.s3.amazonaws.com/i/unu5xz7puc8jdtltjx6u.PNG" class="blog-image">
+    <h2>Var Vs Let Vs Const - A Summary</h2>
+    
+    <table>
+        <thead>
+        <tr>
+        <th></th>
+        <th>var</th>
+        <th>let</th>
+        <th>const</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <th>Scope</th>
+        <td>Function or Global</td>
+        <td>Block</td>
+        <td>Block</td>
+        </tr>
+        <tr>
+        <th>Redeclare</th>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+        </tr>
+        <tr>
+        <th>Reassign</th>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        </tr>
+        <tr>
+        <th>Hoisted</th>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+        </tr>
+        </tbody>
+        </table>
+
+       
+</div>
+
+
+
+</body>
+</html>
