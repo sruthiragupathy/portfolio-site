@@ -185,6 +185,7 @@ hr{
     max-width:400px;
 
     }
+    
   }
 
 .blog a{
@@ -221,4 +222,45 @@ table td, table th {
 
   p{
       line-height: 1.65rem;
+  }
+
+  blockquote{
+      max-width:20rem;
+  }
+
+
+  .instagram{
+      margin:auto;
+      
+      display: grid;
+      
+  }
+
+  .instagram-div{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin:2rem 0rem;
+  }
+
+  .instagram-media{
+      max-width:15rem;
+      
+      
+  }
+
+  @media only screen and (min-width: 700px) {
+   
+    .instagram{
+    grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
+
+  @media only screen and (min-width: 950px) {
+   
+    .instagram{
+    grid-template-columns: repeat(3, 1fr);
+
+    }
   }
