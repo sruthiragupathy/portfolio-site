@@ -84,6 +84,8 @@ hr{
     text-align:right;
 }
 
+
+
 .nav .item-active{
     font-weight:900;
 }
@@ -230,9 +232,10 @@ table td, table th {
 
 
   .instagram{
-      margin:auto;
+      
       
       display: grid;
+      margin:2.5rem 0;
       
   }
 
@@ -240,7 +243,7 @@ table td, table th {
       display:flex;
       justify-content: center;
       align-items: center;
-      margin:2rem 0rem;
+      margin:0rem 0rem 2rem 0rem; 
   }
 
   .instagram-media{
